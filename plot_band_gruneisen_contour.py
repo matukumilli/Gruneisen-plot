@@ -152,7 +152,7 @@ nb = 16 	# number of branches to plot
 ##1
 ####################High-symmetry path Gamma-X
 numa = (py-my)/y
-deno = (2938.6792 - 2606.3328)/2769.1828
+deno = (2938.6792 - 2606.3328)/2769.1828   #(vol_p - vol_m)/vol_o
 gruu = -1*numa/deno
 gru = y*conv
 #ax1  = fig.add_subplot(111)
@@ -212,6 +212,7 @@ for i in range(nb):
     ykey= 101 + xkey #str("b"+str(i))
     plot_colourline(g+gx+gxs+x34[xkey:ykey], gru4[xkey:ykey], gruu4[xkey:ykey])
 
+# sometimes the mode correspondence across volumes has to be confirmed through inspection of eigen mode displacemnts 
 plot_colourline(g+gx+gxs+x34[a1:b1], gru4[a1:b1], gru44)#gruu4[a1:b1])
 plot_colourline(g+gx+gxs+x34[a2:b2-1], gru4[a2:b2-1], gru42[0:100])# gruu4[a2:b2-1])
 plot_colourline(g+gx+gxs+x34[a3:b3], gru4[a3:b3], gru43)#gruu4[a3:b3])
@@ -239,6 +240,7 @@ for i in range(nb):
     ykey= 101 + xkey #str("b"+str(i))
     plot_colourline(g+gx+gxs+gxsy+x35[xkey:ykey], gru5[xkey:ykey], gruu5[xkey:ykey])
 
+# sometimes the mode correspondence across volumes has to be confirmed through inspection of eigen mode displacemnts 
 plot_colourline(g+gx+gxs+gxsy+x35[a1:b1], gru5[a1:b1], gru51)#gruu4[a1:b1])
 plot_colourline(g+gx+gxs+gxsy+x35[a2:b2], gru5[a2:b2], gru52[0:100])# gruu4[a2:b2-1])
 plot_colourline(g+gx+gxs+gxsy+x35[a3+1:b3], gru5[a3+1:b3], gru53[1:101])#gruu4[a3:b3])
@@ -262,7 +264,7 @@ plt.tight_layout()
 #plt.margins(0.2)
 ##############################COLOR BAR
 plt.subplots_adjust(wspace=0.05, hspace=0)
-hh=plt.scatter(g+x32[a1:b1], gru2[a1:b1], gruu2[a1:b1], cmap='cm.jet')
+hh=plt.scatter(g+x32[a1:b1], gru2[a1:b1], gruu2[a1:b1], cmap='cm.jet')  #choose a colorbar cmap
 cbar=plt.colorbar(hh)	#, label='$\gamma$', )
 plt.set_cmap(cm.jet)
 plt.clim(cmin,cmax)
