@@ -1,8 +1,8 @@
 #Plot phonon dispersion: 
 #created by Prasad Matukumilli matukumilli@gmail.com
-#This script read bands.gnuplot files (produced from phonopy band.yaml with band-connection tag ON)
+#This script read bands.gnuplot files (produced from phonopy band.yaml with BAND_CONNECTION = .TRUE., and BAND_POINTS = 101)
 #that are calculated separately at three different uc volumes (orig, plus, minus)
-#NOTE: band.yaml(for 3:orig,plus,minus) files must be generated separately for each high-symmetry path
+#NOTE: band.yaml and bands.gnuplot files (for 3:orig,plus,minus) must be generated separately for each high-symmetry path
  
 import numpy as np
 import matplotlib.pyplot as plt
