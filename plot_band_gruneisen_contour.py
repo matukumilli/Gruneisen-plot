@@ -26,7 +26,7 @@ ymin=-0.1*conv
 cmin=-10
 cmax=20
 
-#fucntion to draw lime plot with colourred according to a parameter (here it is mode Gruneisem)
+#fucntion to draw line plot with colourred according to a parameter (here it is mode Gruneisem)
 def plot_colourline(x,y,c):
     c = cm.jet((c-cmin)/(cmax-cmin))
     #c = cm.jet((c-np.min(c))/(np.max(c)-np.min(c)))
