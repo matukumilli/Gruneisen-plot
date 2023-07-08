@@ -40,7 +40,8 @@ def plot_colourline(x,y,c):
 fig = plt.figure(figsize=(16,10))
 ax1 = plt.subplot2grid((1, 4), (0, 0), colspan=3)
 
-#set row numbers that covers the data in band.gnuplot file. (To plot the whole dispersion i.e, all high symmetry paths, set b= max(rows)
+#set row numbers that covers the data in band.gnuplot file. 
+#(To plot the whole dispersion i.e, all high symmetry paths, set b= max(rows)
 a=0
 b=1616
 ####################High-symmetry path Gamma-X
